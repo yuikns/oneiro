@@ -1,18 +1,19 @@
-<?php get_header(); ?><!--Navigation Bar-->
-            <div id="navbar">
-            	<div id="nav-auto" class="primary">
-				<?php wp_nav_menu( array('menu' => 'Header Menu','menu_id'=>'nav','container'=>'ul' )); ?> <!-- editable within the Wordpress backend -->
-				</div>
-                <div id="search">
-                <?php get_search_form(); ?> 
-                </div>
-            </div>
-			<!--End of Navigation Bar-->
+<?php get_header(); ?>
+
+<!--Navigation Bar-->
+<div id="navbar">
+    <div id="nav-auto" class="primary">
+        <?php wp_nav_menu( array('menu' => 'Header Menu','menu_id'=>'nav','container'=>'ul' )); ?> <!-- editable within the Wordpress backend -->
+    </div>
+    
+    <div id="search"><?php get_search_form(); ?></div>
+</div>
+<!--End of Navigation Bar-->
+
 <article>
-	<div id="article">
-            <div class="xcontainer">
-         
-  			<div class="layout">
+    <div id="article">
+        <div class="xcontainer">
+            <div class="layout">
             
             
 	<div id="content">

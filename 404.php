@@ -3,9 +3,9 @@
 <!--Navigation Bar-->
 <div id="navbar">
     <div id="nav-auto" class="primary">
-        <?php wp_nav_menu( array('menu' => 'Header Menu','menu_id'=>'nav','container'=>'ul' )); ?> <!-- editable within the Wordpress backend -->
+        <?php wp_nav_menu(array('menu' => 'Header Menu', 'menu_id' => 'nav', 'container' => 'ul')); ?> <!-- editable within the Wordpress backend -->
     </div>
-    
+
     <div id="search"><?php get_search_form(); ?></div>
 </div>
 <!--End of Navigation Bar-->
@@ -14,18 +14,18 @@
     <div id="article">
         <div class="xcontainer">
             <div class="layout">
-            
-            
+
+
 	<div id="content">
     <div class="content-header"></div>
 
-		
+
 			<h2>404 : File Not Found ... </h2>
-			
-            
+
+
              <div class="post-meta-single"></div><!--.postMeta-->
-            
-            
+
+
 
 			<div class="post-content">
 <p>The <b>404</b> or <b>Not Found</b> <a href="http://en.wikipedia.org/wiki/Error_message" title="Error message">error message</a> is a <a href="http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol" title="Hypertext Transfer Protocol">HTTP</a> <a href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes" title="List of HTTP status codes">standard response code</a> indicating that the <a href="http://en.wikipedia.org/wiki/Web_browser" title="Web browser">client</a> was able to communicate with a given <a href="http://en.wikipedia.org/wiki/Server_(computing)" title="Server (computing)">server</a>, but the server could not find what was requested.</p>

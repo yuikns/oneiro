@@ -171,7 +171,8 @@ while ($tmp_c->comment_parent != 0) {
 
                  <?php if (function_exists('get_avatar')) {
     ?><div class="gravatar2"><?php echo get_avatar($comment, 32);
-    ?></div><?php 
+    ?></div><?php
+
 }
     ?>
 
@@ -205,7 +206,8 @@ while ($tmp_c->comment_parent != 0) {
 
 
         <!-- sth. else -->
-            <?php 
+            <?php
+
 } else {
     ?>
 
@@ -216,7 +218,8 @@ while ($tmp_c->comment_parent != 0) {
 
                  <?php if (function_exists('get_avatar')) {
     ?><div class="gravatar"><?php echo get_avatar($comment, 32);
-    ?></div><?php 
+    ?></div><?php
+
 }
     ?>
 
@@ -246,7 +249,8 @@ while ($tmp_c->comment_parent != 0) {
         </div> <!--.master end-->
 
 
-        <?php 
+        <?php
+
 }?>
       </div>
 

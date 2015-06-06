@@ -49,7 +49,8 @@
     ?>
     <script type="text/javascript" src="<?php bloginfo('template_directory');
     ?>/comments-ajax.js"></script>
-    <?php 
+    <?php
+
 } ?>
 
 </head>
@@ -69,7 +70,8 @@
                         <a href="<?php bloginfo('url');
      ?>/wp-admin/">Control Panel</a>
                     </div><!--#if-logged-in-->
-                    <?php 
+                    <?php
+
  } ?>
 
                 <div id="logo">
@@ -79,14 +81,16 @@
     ?>/" title="<?php bloginfo('description');
     ?>"><?php bloginfo('name');
     ?></a></h1>
-                    <?php 
+                    <?php
+
 } else {
     ?>
                         <h2><a href="<?php bloginfo('url');
     ?>/" title="<?php bloginfo('description');
     ?>"><?php bloginfo('name');
     ?></a></h2>
-                    <?php 
+                    <?php
+
 } ?>
                 </div>
 

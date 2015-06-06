@@ -56,7 +56,8 @@
  } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {
      ?>
     <h1>Blog Archives</h1>
-   <?php 
+   <?php
+
  } ?>
 
 

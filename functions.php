@@ -173,49 +173,49 @@
          if (!$paged) {
              $paged = 1;
          }
-    if ($paged != 1) {
-        echo "<a href='".get_pagenum_link(1)."' class='extend' title='跳转到首页'>返回首页</a>";
-    }
-    previous_posts_link('上一页');
-    if ($max_page > $range) {
-        if ($paged < $range) {
-            for ($i = 1; $i <= ($range + 1); $i++) {
-                echo "<a href='".get_pagenum_link($i)."'";
-                if ($i == $paged) {
-                    echo " class='current'";
-                }
-                echo ">$i</a>";
-            }
-        } elseif ($paged >= ($max_page - ceil(($range / 2)))) {
-            for ($i = $max_page - $range; $i <= $max_page; $i++) {
-                echo "<a href='".get_pagenum_link($i)."'";
-                if ($i == $paged) {
-                    echo " class='current'";
-                }
-                echo ">$i</a>";
-            }
-        } elseif ($paged >= $range && $paged < ($max_page - ceil(($range / 2)))) {
-            for ($i = ($paged - ceil($range / 2)); $i <= ($paged + ceil(($range / 2))); $i++) {
-                echo "<a href='".get_pagenum_link($i)."'";
-                if ($i == $paged) {
-                    echo " class='current'";
-                }
-                echo ">$i</a>";
-            }
-        }
-    } else {
-        for ($i = 1; $i <= $max_page; $i++) {
-            echo "<a href='".get_pagenum_link($i)."'";
-            if ($i == $paged) {
-                echo " class='current'";
-            }
-            echo ">$i</a>";
-        }
-    }
-    next_posts_link('下一页');
-    if ($paged != $max_page) {
-        echo "<a href='".get_pagenum_link($max_page)."' class='extend' title='跳转到最后一页'>最后一页</a>";
-    }
+         if ($paged != 1) {
+             echo "<a href='".get_pagenum_link(1)."' class='extend' title='跳转到首页'>返回首页</a>";
+         }
+         previous_posts_link('上一页');
+         if ($max_page > $range) {
+             if ($paged < $range) {
+                 for ($i = 1; $i <= ($range + 1); $i++) {
+                     echo "<a href='".get_pagenum_link($i)."'";
+                     if ($i == $paged) {
+                         echo " class='current'";
+                     }
+                     echo ">$i</a>";
+                 }
+             } elseif ($paged >= ($max_page - ceil(($range / 2)))) {
+                 for ($i = $max_page - $range; $i <= $max_page; $i++) {
+                     echo "<a href='".get_pagenum_link($i)."'";
+                     if ($i == $paged) {
+                         echo " class='current'";
+                     }
+                     echo ">$i</a>";
+                 }
+             } elseif ($paged >= $range && $paged < ($max_page - ceil(($range / 2)))) {
+                 for ($i = ($paged - ceil($range / 2)); $i <= ($paged + ceil(($range / 2))); $i++) {
+                     echo "<a href='".get_pagenum_link($i)."'";
+                     if ($i == $paged) {
+                         echo " class='current'";
+                     }
+                     echo ">$i</a>";
+                 }
+             }
+         } else {
+             for ($i = 1; $i <= $max_page; $i++) {
+                 echo "<a href='".get_pagenum_link($i)."'";
+                 if ($i == $paged) {
+                     echo " class='current'";
+                 }
+                 echo ">$i</a>";
+             }
+         }
+         next_posts_link('下一页');
+         if ($paged != $max_page) {
+             echo "<a href='".get_pagenum_link($max_page)."' class='extend' title='跳转到最后一页'>最后一页</a>";
+         }
      }
  }
 
@@ -313,7 +313,8 @@ add_shortcode('mp3', 'mp3link');
 </div>
 
 
-    <?php 
+    <?php
+
     }
 
     // A Function that output's the current page's URL
@@ -380,7 +381,8 @@ function custom_comments($comment, $args, $depth)
     ?>
                 <div class="gravatar2"><?php echo get_avatar($comment, 32);
     ?></div>
-            <?php 
+            <?php
+
 }
     ?>
 
@@ -413,7 +415,8 @@ function custom_comments($comment, $args, $depth)
 
 
         <!--然后剩下的就是其他人的样式了-->
-            <?php 
+            <?php
+
 } else {
     ?>
 
@@ -424,7 +427,8 @@ function custom_comments($comment, $args, $depth)
 
                  <?php if (function_exists('get_avatar')) {
     ?><div class="gravatar"><?php echo get_avatar($comment, 32);
-    ?></div><?php 
+    ?></div><?php
+
 }
     ?>
 
@@ -452,7 +456,8 @@ function custom_comments($comment, $args, $depth)
         </div> <!--.master end-->
 
 
-        <?php 
+        <?php
+
 }
     ?>
       </div>
@@ -460,7 +465,8 @@ function custom_comments($comment, $args, $depth)
 
     </li>
 
-    <?php 
+    <?php
+
 }
 //////////////////////////////////////////////////////////////
 

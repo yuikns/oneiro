@@ -1,39 +1,39 @@
 <?php get_header(); ?>
-			<!--Navigation Bar-->
+            <!--Navigation Bar-->
             <div id="navbar">
-            	<div id="nav-auto" class="primary">
-				<?php wp_nav_menu(array('menu' => 'Header Menu', 'menu_id' => 'nav', 'container' => 'ul')); ?> <!-- editable within the Wordpress backend -->
-				</div>
+                <div id="nav-auto" class="primary">
+                <?php wp_nav_menu(array('menu' => 'Header Menu', 'menu_id' => 'nav', 'container' => 'ul')); ?> <!-- editable within the Wordpress backend -->
+                </div>
                 <div id="search">
                 <?php get_search_form(); ?>
                 </div>
             </div>
-			<!--End of Navigation Bar-->
+            <!--End of Navigation Bar-->
 <article>
-	<div id="article">
+    <div id="article">
             <div class="xcontainer">
 
-  			<div class="layout">
+              <div class="layout">
 
 
-	<div id="content">
+    <div id="content">
     <div class="content-header"><div id="tip"></div><div id="godown"></div></div>
 
-		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			<h2><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+            <h2><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 
 
             <div class="post-meta-single">
-				<span class="com-writer">
-					<?php the_author_posts_link() ?>
-				</span>
-				<span class="con-cate">
-					<?php the_category(', ') ?>
-				</span>
+                <span class="com-writer">
+                    <?php the_author_posts_link() ?>
+                </span>
+                <span class="con-cate">
+                    <?php the_category(', ') ?>
+                </span>
 
- 				<span class="con-commt">
-					<?php comments_popup_link('No Comment', '1 Comment', '% Comments'); ?>
-				</span>
+                 <span class="con-commt">
+                    <?php comments_popup_link('No Comment', '1 Comment', '% Comments'); ?>
+                </span>
                 <span class="con-edit">
                 <?php edit_post_link('<span class="edit">Edit</span>');?>
                 </span>
@@ -45,12 +45,12 @@
                 </span>
             </div><!--.postMeta-->
 
-			<div class="post-content">
-				<?php the_content(); ?>
-			</div>
+            <div class="post-content">
+                <?php the_content(); ?>
+            </div>
 
              <div class="post-info">
-					 <script> // juqery to the top
+                     <script> // juqery to the top
                      jQuery(document).ready(function($) {
                         $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');// 这行是 Opera 的补丁, 少了它 Opera 是直接用跳的而且画面闪烁 by willin
                         $('#content .gotop').click(function(){
@@ -61,7 +61,7 @@
                      </script>
                  <span class="gotop">TOP</span>
                  <div class="crumbs">
-                	<?php if (function_exists('get_breadcrumbs')) {
+                    <?php if (function_exists('get_breadcrumbs')) {
     get_breadcrumbs();
 } ?>
                  </div>
@@ -80,16 +80,16 @@
 
 
 
-		<?php endwhile; else: ?>
-			<div class="no-results">
-				<p><strong>There has been an error.</strong></p>
-				<p>We apologize for any inconvenience, please <a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('description'); ?>">return to the home page</a> or use the search form below.</p>
-				<?php get_search_form(); ?> <!-- outputs the default Wordpress search form-->
-			</div><!--noResults-->
-		<?php endif; ?>
+        <?php endwhile; else: ?>
+            <div class="no-results">
+                <p><strong>There has been an error.</strong></p>
+                <p>We apologize for any inconvenience, please <a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('description'); ?>">return to the home page</a> or use the search form below.</p>
+                <?php get_search_form(); ?> <!-- outputs the default Wordpress search form-->
+            </div><!--noResults-->
+        <?php endif; ?>
 
         <div class="clear"></div>
-	</div><!--#content-->
+    </div><!--#content-->
 <?php get_sidebar(); ?>
 <div class="clear"></div>
 </div><!--#layout-->

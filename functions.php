@@ -250,18 +250,18 @@ add_shortcode('mp3', 'mp3link');
 
 
 <div class="wrap" style="padding:10px;">
-    	<h2>Oneiro主题说明</h2>
+        <h2>Oneiro主题说明</h2>
 
         <p>呃，因为作者还不太会php，看着各种数组变量什么的会头大，所以就不做主题设置这种太高级的东西了，留下一些说明请自行参看修改。</p>
         <br>
 
 
-		<h3>Logo说明</h3>
+        <h3>Logo说明</h3>
         <p>Logo使用的是图片，请在主题文件的images里找到PSD用Photoshop自行修改文字。然后保存为Oneiro-logo.png,替换原图片即可。</p>
 
-     	<br>
+         <br>
         <h3>如何自定义幻灯片</h3>
-		<p>1.首先在Wordpress后台由[外观]进入[编辑]，再进入[slideshow.php]。</p>
+        <p>1.首先在Wordpress后台由[外观]进入[编辑]，再进入[slideshow.php]。</p>
         <p>2.从文件中下找到&lt;div class="slides"&gt; ， 里面一层就是开始添加幻灯片了。（具体位置我写有注释，相信你能很快找到，从下往上看会比较容易找到）</p>
         <p>3.添加幻灯片的方法就是加入&lt;div &gt; &lt;/div &gt; （注意，div是要并列的，不能嵌套）。嗯，也就是说每加入一个幻灯片必须要用&lt;div &gt; &lt;/div &gt;包裹住</p>
 
@@ -280,40 +280,40 @@ add_shortcode('mp3', 'mp3link');
         </blockquote>
 
         <br>
-		<h3>导航栏说明</h3>
-		<p>如果从来没有使用过[外观]里的[菜单]，请先去设置好。没有设置的话，会引起导航栏错位。</p>
+        <h3>导航栏说明</h3>
+        <p>如果从来没有使用过[外观]里的[菜单]，请先去设置好。没有设置的话，会引起导航栏错位。</p>
 
 
         <br>
-		<h3>下载缩写短代码</h3>
-		<p>短代码源于<a href="http://xuui.net/wordpress/istudio-theme-release.html">istudio</a></p>
-		<p>[Downlink href="URL"]Filename[/Downlink]  &nbsp;（URL请直接输入网址，不要带上“http://”)</p>
+        <h3>下载缩写短代码</h3>
+        <p>短代码源于<a href="http://xuui.net/wordpress/istudio-theme-release.html">istudio</a></p>
+        <p>[Downlink href="URL"]Filename[/Downlink]  &nbsp;（URL请直接输入网址，不要带上“http://”)</p>
         <p>例：[Downlink href="ongakuer.com"]下载文件名[/Downlink] </p>
 
 
-      	<br>
-		<h3>侧边栏说明</h3>
+          <br>
+        <h3>侧边栏说明</h3>
         <p>边栏模板(sidebar.php) 默认有：随机文章、最新评论、存档、友情链接，即使添加小工具也不覆盖。所以不需要的话请自行删除。</p>
-		<p>侧边栏的广告可以替换成自己的，或者删掉。</p>
+        <p>侧边栏的广告可以替换成自己的，或者删掉。</p>
 
-		<br>
-   		<h3>Guestbook模板使用</h3>
+        <br>
+           <h3>Guestbook模板使用</h3>
         <p>这个模板是用来制作留言本的。与默认模板的区别是评论按照时间顺序倒序排列，最新发表的评论在最上面。</p>
-		<p>使用方法为，添加新页面，在右侧的“页面属性”下选择“Guestbook(留言本)”即可。</p>
+        <p>使用方法为，添加新页面，在右侧的“页面属性”下选择“Guestbook(留言本)”即可。</p>
 
 
 
-      	<br>
-		<h3>其他注意的地方</h3>
+          <br>
+        <h3>其他注意的地方</h3>
         <p>头部背景附带有psd，可以用PS自行修改。保存图片的时候请选择“储存为web及设备所用格式”，jpg的格式。</p>
-		<p>推荐配合Mail to Commenter使用评论邮件通知。在其插件设置页面代码类型选择[ '@+用户名+:']即可</p>
+        <p>推荐配合Mail to Commenter使用评论邮件通知。在其插件设置页面代码类型选择[ '@+用户名+:']即可</p>
 
   <br><br><br><br>
         以上，说明完了。如果你在使用中有其他问题，可以 <a href="http://ongakuer.com/archives/oneiro-theme/" target="_blank">给我留言</a>。
 </div>
 
 
-	<?php 
+    <?php 
     }
 
     // A Function that output's the current page's URL
@@ -342,9 +342,9 @@ add_shortcode('mp3', 'mp3link');
     function to_reply()
     {
         ?>
-	<a onclick='to_reply("<?php comment_ID() ?>", "<?php comment_author();
+    <a onclick='to_reply("<?php comment_ID() ?>", "<?php comment_author();
         ?>")' href="#respond" style="cursor:pointer;">Reply</a>
-	<?php
+    <?php
 
     }
 
@@ -376,24 +376,24 @@ function custom_comments($comment, $args, $depth)
 
          <div class="master-layout" >
 
-        		 <?php if (function_exists('get_avatar')) {
+                 <?php if (function_exists('get_avatar')) {
     ?>
-				<div class="gravatar2"><?php echo get_avatar($comment, 32);
+                <div class="gravatar2"><?php echo get_avatar($comment, 32);
     ?></div>
-			<?php 
+            <?php 
 }
     ?>
 
-				<cite><?php comment_author_link() ?></cite>
+                <cite><?php comment_author_link() ?></cite>
 
-          		 <span  class="masterinfo"><?php to_reply();
+                   <span  class="masterinfo"><?php to_reply();
     ?><a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date() ?> <?php comment_time('H:i');
     ?></a>
 
 
 
 
-          		<?php edit_comment_link('Edit');
+                  <?php edit_comment_link('Edit');
     ?></span>
 
 
@@ -422,20 +422,20 @@ function custom_comments($comment, $args, $depth)
 
          <div class="customer-layout" >
 
-        		 <?php if (function_exists('get_avatar')) {
+                 <?php if (function_exists('get_avatar')) {
     ?><div class="gravatar"><?php echo get_avatar($comment, 32);
     ?></div><?php 
 }
     ?>
 
-				<cite><?php comment_author_link() ?></cite>
+                <cite><?php comment_author_link() ?></cite>
 
-          		 <span  class="customerinfo"><?php to_reply();
+                   <span  class="customerinfo"><?php to_reply();
     ?><a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date() ?> <?php comment_time('H:i:s');
     ?></a>
 
 
-          		<?php edit_comment_link('Edit');
+                  <?php edit_comment_link('Edit');
     ?></span>
 
 

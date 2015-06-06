@@ -1,26 +1,26 @@
 <?php get_header(); ?>
-			<!--Navigation Bar-->
+            <!--Navigation Bar-->
             <div id="navbar">
-            	<div id="nav-auto" class="primary">
-				<?php wp_nav_menu(array('menu' => 'Header Menu', 'menu_id' => 'nav', 'container' => 'ul')); ?> <!-- editable within the Wordpress backend -->
-				</div>
+                <div id="nav-auto" class="primary">
+                <?php wp_nav_menu(array('menu' => 'Header Menu', 'menu_id' => 'nav', 'container' => 'ul')); ?> <!-- editable within the Wordpress backend -->
+                </div>
                 <div id="search">
                 <?php get_search_form(); ?>
                 </div>
             </div>
-			<!--End of Navigation Bar-->
+            <!--End of Navigation Bar-->
 <article>
-	<div id="article">
+    <div id="article">
             <div class="xcontainer">
 
-  			<div class="layout">
+              <div class="layout">
 
 
-	<div id="content">
+    <div id="content">
     <div class="content-header"></div>
 
-		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			<h2><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+            <h2><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 
 
              <div class="post-meta-single">
@@ -39,9 +39,9 @@
 
 
 
-			<div class="post-content">
-				<?php the_content(); ?>
-			</div>
+            <div class="post-content">
+                <?php the_content(); ?>
+            </div>
 
 
 
@@ -51,16 +51,16 @@
 
 
 
-		<?php endwhile; else: ?>
-			<div class="no-results">
-				<p><strong>There has been an error.</strong></p>
-				<p>We apologize for any inconvenience, please <a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('description'); ?>">return to the home page</a> or use the search form below.</p>
-				<?php get_search_form(); ?> <!-- outputs the default Wordpress search form-->
-			</div><!--noResults-->
-		<?php endif; ?>
+        <?php endwhile; else: ?>
+            <div class="no-results">
+                <p><strong>There has been an error.</strong></p>
+                <p>We apologize for any inconvenience, please <a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('description'); ?>">return to the home page</a> or use the search form below.</p>
+                <?php get_search_form(); ?> <!-- outputs the default Wordpress search form-->
+            </div><!--noResults-->
+        <?php endif; ?>
 
         <div class="clear"></div>
-	</div><!--#content-->
+    </div><!--#content-->
 <?php get_sidebar(); ?>
 <div class="clear"></div>
 </div><!--#layout-->

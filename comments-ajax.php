@@ -155,7 +155,7 @@ while ($tmp_c->comment_parent != 0) {
 #comments1 ol li {list-style-type:none;}
 </style>
 
-	<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+    <li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
       <div class="list">
         <!--strong><?php echo $commentcount ?>.</strong-->
         <?php if ($comment->comment_author_email == get_the_author_email()) {
@@ -169,20 +169,20 @@ while ($tmp_c->comment_parent != 0) {
 
          <div class="master-layout" >
 
-        		 <?php if (function_exists('get_avatar')) {
+                 <?php if (function_exists('get_avatar')) {
     ?><div class="gravatar2"><?php echo get_avatar($comment, 32);
     ?></div><?php 
 }
     ?>
 
-				<cite><?php comment_author_link() ?></cite>
+                <cite><?php comment_author_link() ?></cite>
 
-          		 <span  class="masterinfo"><?php to_reply();
+                   <span  class="masterinfo"><?php to_reply();
     ?><a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date() ?> <?php comment_time('H:i');
     ?></a>
 
 
-          		<?php edit_comment_link('Edit');
+                  <?php edit_comment_link('Edit');
     ?></span>
 
 
@@ -214,20 +214,20 @@ while ($tmp_c->comment_parent != 0) {
 
          <div class="customer-layout" >
 
-        		 <?php if (function_exists('get_avatar')) {
+                 <?php if (function_exists('get_avatar')) {
     ?><div class="gravatar"><?php echo get_avatar($comment, 32);
     ?></div><?php 
 }
     ?>
 
-				<cite><?php comment_author_link() ?></cite>
+                <cite><?php comment_author_link() ?></cite>
 
-          		 <span  class="customerinfo"><?php to_reply();
+                   <span  class="customerinfo"><?php to_reply();
     ?><a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date() ?> <?php comment_time('H:i');
     ?></a>
 
 
-          		<?php edit_comment_link('Edit');
+                  <?php edit_comment_link('Edit');
     ?></span>
 
 

@@ -342,10 +342,7 @@ add_shortcode('mp3', 'mp3link');
     //reply for xxx
     function to_reply()
     {
-        ?>
-    <a onclick='to_reply("<?php comment_ID() ?>", "<?php comment_author();
-        ?>")' href="#respond" style="cursor:pointer;">Reply</a>
-    <?php
+        ?><strong><a onclick='to_reply("<?php comment_ID() ?>", "<?php comment_author(); ?>")' href="#respond" style="cursor:pointer;">Reply Me</a></strong><?php
 
     }
 
@@ -378,9 +375,9 @@ function custom_comments($comment, $args, $depth)
 
                         <cite><?php comment_author_link() ?></cite>
 
-                        <span class="masterinfo"><?php to_reply(); ?>
-                            <a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date() ?> <?php comment_time('H:i'); ?></a><?php edit_comment_link('Edit'); ?>
-                        </span>
+                        <span class='tstamp'><?php comment_date() ?> <?php comment_time('H:i:s'); ?></span>
+
+                        <span class="masterinfo"><?php to_reply(); ?>&nbsp;&nbsp;<?php edit_comment_link('Edit'); ?></span>
 
                         <div class="mastertext"><?php comment_text() ?></div>
 
@@ -397,9 +394,9 @@ function custom_comments($comment, $args, $depth)
 
                         <cite><?php comment_author_link() ?></cite>
 
-                        <span class="customerinfo"><?php to_reply(); ?>
-                            <a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date() ?> <?php comment_time('H:i:s'); ?></a> <?php edit_comment_link('Edit'); ?>
-                        </span>
+                        <span class='tstamp'><?php comment_date() ?> <?php comment_time('H:i:s'); ?></span>
+
+                        <span class="customerinfo"><?php to_reply(); ?>&nbsp;&nbsp;<?php edit_comment_link('Edit'); ?></span>
 
                         <div class="customertext"><?php comment_text() ?></div>
 

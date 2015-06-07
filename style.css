@@ -311,6 +311,8 @@ body {margin: 0;padding: 0;}
 
 /*-----Comments-----*/
 
+.tstamp {font-style:italic;font-size:10px;}
+
 #comments1 {clear:both;margin-left:25px; margin: 20px 0 25px 0;font-size:12px; }
 #comments1 a{font-family:Verdana, Geneva, sans-serif; text-decoration:none;}
 #comments1 a:hover{font-family:Verdana, Geneva, sans-serif;text-decoration:none;}

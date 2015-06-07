@@ -366,7 +366,9 @@ function custom_comments($comment, $args, $depth)
 
     <li <?php comment_class( $depth == '1' ? 'parent' : 'children'); ?> id="comment-<?php comment_ID(); ?>">
         <div class="list" style="margin-left:<?php echo 5 * $intval_depth; ?>%">
-            <?php if ($comment->comment_author_email == get_the_author_email()) { ?>
+            <?php if ($comment->comment_approved == '0') { ?>
+                <span style="color:#F60; padding-left:5px;">Your comment is awaiting moderation.</span>
+            <?php } else if ($comment->comment_author_email == get_the_author_email()) { ?>
                 <!--master's reply-->
                 <div class="master">
                     <div class="master-layout" >
@@ -384,9 +386,6 @@ function custom_comments($comment, $args, $depth)
 
                     </div> <!-- .master-layout end-->
                 </div> <!--.master end-->
-
-            <?php } else if ($comment->comment_approved == '0') { ?>
-                <span style="color:#F60; padding-left:5px;">Your comment is awaiting moderation.</span>
             <?php } else { ?>
                 <!--customer's reply-->
                 <div class="customer">

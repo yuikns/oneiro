@@ -109,7 +109,7 @@
         }
     }
 
-    //面包屑导航
+    //breadcrumbs
     function get_breadcrumbs()
     {
         global $wp_query;
@@ -162,7 +162,7 @@
         }
     }
 
-     // 翻页
+     // pagenavi
  function par_pagenavi($range = 9)
  {
      global $paged, $wp_query;
@@ -222,7 +222,7 @@
     //禁用半角符号自动转换为全角
     remove_filter('the_content', 'wptexturize');
 
-    // 自定义短链接
+    // down shortlink
 function downlink($atts, $content = null)
 {
     extract(shortcode_atts(array('href' => 'http://'), $atts));
@@ -339,7 +339,7 @@ add_shortcode('mp3', 'mp3link');
 //////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////
 
-    //评论…@对话
+    //reply for xxx
     function to_reply()
     {
         ?>
@@ -349,124 +349,68 @@ add_shortcode('mp3', 'mp3link');
 
     }
 
-    //定义 Comments 列表.
+    //callback for comments list
 function custom_comments($comment, $args, $depth)
 {
     $GLOBALS['comment'] = $comment;
-    global $commentcount;
-    if (!$commentcount) {
-        $commentcount = 0;
-    }
-    $commentcount++;
+    //global $commentcount;
+    //if (!$commentcount) {
+    //    $commentcount = 0;
+    //}
+    //$commentcount++;
+    $intval_depth = intval($depth) - 1;
+    if($intval_depth > 5) $intval_depth = 5;
     global $commentalt;
     ($commentalt == 'alt') ? $commentalt = '' : $commentalt = 'alt';
     ?>
 
-    <li <?php comment_class();
-    ?> id="comment-<?php comment_ID();
-    ?>">
-      <div class="list">
-        <!--strong><?php echo $commentcount ?>.</strong-->
-        <?php if ($comment->comment_author_email == get_the_author_email()) {
-    ?>
+    <li <?php comment_class( $depth == '1' ? 'parent' : 'children'); ?> id="comment-<?php comment_ID(); ?>">
+        <div class="list" style="margin-left:<?php echo 5 * $intval_depth; ?>%">
+            <?php if ($comment->comment_author_email == get_the_author_email()) { ?>
+                <!--master's reply-->
+                <div class="master">
+                    <div class="master-layout" >
+                        <?php if (function_exists('get_avatar')) { ?>
+                            <div class="gravatar2"><?php echo get_avatar($comment, 32);?></div>
+                        <?php } ?>
 
+                        <cite><?php comment_author_link() ?></cite>
 
-        <!--首先判断主人-->
+                        <span class="masterinfo"><?php to_reply(); ?>
+                            <a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date() ?> <?php comment_time('H:i'); ?></a><?php edit_comment_link('Edit'); ?>
+                        </span>
 
-       <div class="master">
+                        <div class="mastertext"><?php comment_text() ?></div>
 
-         <div class="master-layout" >
+                    </div> <!-- .master-layout end-->
+                </div> <!--.master end-->
 
-                 <?php if (function_exists('get_avatar')) {
-    ?>
-                <div class="gravatar2"><?php echo get_avatar($comment, 32);
-    ?></div>
-            <?php
+            <?php } else if ($comment->comment_approved == '0') { ?>
+                <span style="color:#F60; padding-left:5px;">Your comment is awaiting moderation.</span>
+            <?php } else { ?>
+                <!--customer's reply-->
+                <div class="customer">
+                    <div class="customer-layout" >
 
-}
-    ?>
+                        <?php if (function_exists('get_avatar')) { ?>
+                            <div class="gravatar"><?php echo get_avatar($comment, 32); ?></div>
+                        <?php } ?>
 
-                <cite><?php comment_author_link() ?></cite>
+                        <cite><?php comment_author_link() ?></cite>
 
-                   <span  class="masterinfo"><?php to_reply();
-    ?><a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date() ?> <?php comment_time('H:i');
-    ?></a>
+                        <span class="customerinfo"><?php to_reply(); ?>
+                            <a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date() ?> <?php comment_time('H:i:s'); ?></a> <?php edit_comment_link('Edit'); ?>
+                        </span>
 
+                        <div class="customertext"><?php comment_text() ?></div>
 
+                    </div> <!-- .customer-layout end-->
+                </div> <!--.customer end-->
+            <?php } ?>
 
-
-                  <?php edit_comment_link('Edit');
-    ?></span>
-
-
-                    <div class="mastertext">
-                    <?php comment_text() ?>
-                    </div>
-
-
-
-                        <?php if ($comment->comment_approved == '0') : ?></div>  <span style="color:#F60; padding-left:5px;">
-                       评论等待审核中……</span><?php endif;
-    ?>
-       </div> <!--.master end-->
-
-
-
-
-
-        <!--然后剩下的就是其他人的样式了-->
-            <?php
-
-} else {
-    ?>
-
-
-       <div class="customer">
-
-         <div class="customer-layout" >
-
-                 <?php if (function_exists('get_avatar')) {
-    ?><div class="gravatar"><?php echo get_avatar($comment, 32);
-    ?></div><?php
-
-}
-    ?>
-
-                <cite><?php comment_author_link() ?></cite>
-
-                   <span  class="customerinfo"><?php to_reply();
-    ?><a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date() ?> <?php comment_time('H:i:s');
-    ?></a>
-
-
-                  <?php edit_comment_link('Edit');
-    ?></span>
-
-
-                    <div class="customertext">
-                    <?php comment_text() ?>
-                    </div>
-
-
-
-          </div>
-                        <?php if ($comment->comment_approved == '0') : ?><span style="color:#F60; padding-left:5px;">
-                       评论等待审核中……</span><?php endif;
-    ?>
-        </div> <!--.master end-->
-
-
-        <?php
-
-}
-    ?>
-      </div>
-
-
+        </div> <!-- list end -->
     </li>
-
-    <?php
-
+<?php
 }
 //////////////////////////////////////////////////////////////
 

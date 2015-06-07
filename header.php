@@ -37,7 +37,8 @@
     <!-- <script  src="<?php bloginfo('template_url');?>/js/jquery.js"></script> -->
      <?php
         wp_deregister_script('jquery');
-        wp_register_script('jquery', '//lib.sinaapp.com/js/jquery/2.0.3/jquery-2.0.3.min.js', array(), '2.0.3');
+        //wp_register_script('jquery', '//lib.sinaapp.com/js/jquery/2.0.3/jquery-2.0.3.min.js', array(), '2.0.3');
+        wp_register_script('jquery', '//upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.3.min.js', array(), '2.0.3');
         wp_enqueue_script('jquery');
     ?>
 

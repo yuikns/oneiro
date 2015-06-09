@@ -97,8 +97,8 @@
 
                 <span style="display:block;overflow: hidden; width: 0; height: 0;"><?php bloginfo('description'); ?></span>
             </div><!--.bokeh-->
-        </div><!--.container-->
-    </div>
+        </div><!--.tcontainer-->
+    </div><!-- header -->
     <!-- header end -->
 
 

@@ -60,7 +60,7 @@
 <!--Code generation start -->
 <div id="main"><!-- The bottom of the frame structures -->
 
-    <header>
+    <!-- header start -->
     <div id="header">
         <div class="tcontainer">
 
@@ -99,7 +99,7 @@
             </div><!--.bokeh-->
         </div><!--.container-->
     </div>
-    </header>
+    <!-- header end -->
 
 
 

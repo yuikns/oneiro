@@ -8,7 +8,7 @@
 
     <div id="footerbg"></div><!--footerbg-->
     <div id="footer">
-     <footer>
+     <!-- footer start -->
          <div class="fcontainer">
              <div class="footerbar">
                 <div class="footerinfo">
@@ -46,7 +46,7 @@
             <div id="copyright"></div>
 
         </div><!--.xcontainer This is used to make it in center of the page -->
-      </footer>
+      <!-- footer end -->
       <script type='text/javascript'> // This is the animated navigation bar
     jQuery(document).ready(function() {
     $("#nav ul").css({display: "none"}); // Opera Fix

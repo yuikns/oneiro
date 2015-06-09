@@ -45,8 +45,7 @@
                 <?php if (function_exists('the_views')) {
     the_views();
 } ?>　<?php the_time('Y.m.j'); ?>
-                </span
-            ></div><!--.postMeta-->
+                </span></div><!--.postMeta-->
 
 
 

@@ -21,7 +21,7 @@
 <!-- stats of cnzz.com start -->
 <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253531223'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/z_stat.php%3Fid%3D1253531223%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
 <!-- stats of cnzz.com end -->
-                </div>
+                </div> <!-- .footerinfo -->
 
                 <ul>
                     <!--Latest articles, non-Home Display-->
@@ -42,10 +42,10 @@
 
                 </ul>
 
-            </div>
-            <div id="copyright"></div>
+            </div> <!-- .footerbar -->
+            <div id="copyright"></div> <!-- .copyright -->
 
-        </div><!--.xcontainer This is used to make it in center of the page -->
+        </div><!--.fcontainer This is used to make it in center of the page -->
       <!-- footer end -->
       <script type='text/javascript'> // This is the animated navigation bar
     jQuery(document).ready(function() {

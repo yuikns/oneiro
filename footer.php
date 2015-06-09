@@ -2,7 +2,7 @@
     <div class="clear"></div>
     </div><!--#article-->
     <div class="clear"></div>
-    </article>
+    <!-- article end -->
     <div class="clear"></div>
 
 

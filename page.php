@@ -1,57 +1,47 @@
 <?php get_header(); ?>
-            <!--Navigation Bar-->
-            <div id="navbar">
-                <div id="nav-auto" class="primary">
-                <?php wp_nav_menu(array('menu' => 'Header Menu', 'menu_id' => 'nav', 'container' => 'ul')); ?> <!-- editable within the Wordpress backend -->
-                </div>
-                <div id="search">
+
+<!--Navigation Bar-->
+<div id="navbar">
+    <div id="nav-auto" class="primary">
+        <?php wp_nav_menu(array('menu' => 'Header Menu', 'menu_id' => 'nav', 'container' => 'ul')); ?> <!-- editable within the Wordpress backend -->
+    </div>
+    
+    <div id="search">
                 <?php get_search_form(); ?>
-                </div>
-            </div>
-            <!--End of Navigation Bar-->
-<article>
-    <div id="article">
-            <div class="xcontainer">
+    </div>
+</div>
+<!--End of Navigation Bar-->
 
-              <div class="layout">
+            <!-- article -->
+<div id="article">
+    <div class="xcontainer">
+        <div class="layout">
+            <div id="content">
+                <div class="content-header"></div>
 
-
-    <div id="content">
-    <div class="content-header"></div>
-
-        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <h2><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 
 
-             <div class="post-meta-single">
-
-
+            <div class="post-meta-single">
                 <span class="con-edit">
-                <?php edit_post_link('<span class="edit">Edit</span>');?>
+                    <?php edit_post_link('<span class="edit">Edit</span>');?>
                 </span>
                 <span class="showclose" style="display: block">♤ Close Sidebar</span>
                 <span class="con-time">
-                <?php if (function_exists('the_views')) {
-    the_views();
-} ?>　
+                    <?php if (function_exists('the_views')) {
+                        the_views();
+                    } ?>
                 </span>
             </div><!--.postMeta-->
-
-
 
             <div class="post-content">
                 <?php the_content(); ?>
             </div>
 
-
-
-
-
-             <?php comments_template('', true); ?>
-
-
-
-        <?php endwhile; else: ?>
+            <?php comments_template('', true); ?>
+        
+            <?php endwhile; else: ?>
             <div class="no-results">
                 <p><strong>There has been an error.</strong></p>
                 <p>We apologize for any inconvenience, please <a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('description'); ?>">return to the home page</a> or use the search form below.</p>

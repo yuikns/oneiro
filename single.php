@@ -9,10 +9,10 @@
                 </div>
             </div>
             <!--End of Navigation Bar-->
-<article>
+        
+            <!-- article -->
     <div id="article">
             <div class="xcontainer">
-
               <div class="layout">
 
 

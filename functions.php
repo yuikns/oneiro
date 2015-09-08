@@ -162,7 +162,7 @@
         }
     }
 
-     // pagenavi
+     // pagenavi Pager
  function par_pagenavi($range = 9)
  {
      global $paged, $wp_query;
@@ -174,9 +174,9 @@
              $paged = 1;
          }
          if ($paged != 1) {
-             echo "<a href='".get_pagenum_link(1)."' class='extend' title='跳转到首页'>返回首页</a>";
+             echo "<a href='".get_pagenum_link(1)."' class='extend' title='First Page'>First</a>";
          }
-         previous_posts_link('上一页');
+         previous_posts_link('Previous'); // add prev page link
          if ($max_page > $range) {
              if ($paged < $range) {
                  for ($i = 1; $i <= ($range + 1); $i++) {
@@ -212,9 +212,9 @@
                  echo ">$i</a>";
              }
          }
-         next_posts_link('下一页');
+         next_posts_link('Next'); // add next page link
          if ($paged != $max_page) {
-             echo "<a href='".get_pagenum_link($max_page)."' class='extend' title='跳转到最后一页'>最后一页</a>";
+             echo "<a href='".get_pagenum_link($max_page)."' class='extend' title='Last Page'>Last</a>";
          }
      }
  }

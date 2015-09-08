@@ -42,7 +42,7 @@
    <?php /* If this is a monthly archive */
  } elseif (is_month()) {
      ?>
-    <h1>Archive for <?php the_time('Y年F ');
+    <h1>Archive for <?php the_time('F Y');
      ?></h1>
    <?php /* If this is a yearly archive */
  } elseif (is_year()) {

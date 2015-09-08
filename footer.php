@@ -16,8 +16,8 @@
             <p><a href="<?php echo get_option('home');?>/"><?php bloginfo('name');?></a></p>
             <p><?php bloginfo('description'); ?></p>
             <p>Powered by <a href="http://wordpress.org/" rel="external nofollow">WordPress <?php bloginfo('version');?></a></p>
-            <p>Designed by <a href="http://Ongakuer.com/" rel="external nofollow">Ongakuer</a></p>
-            <p>Revised by <a href="http://argcv.com" rel="external nofollow">argcv</a></p>
+            <p>Designed by <a href="http://weibo.com/123551954" rel="external nofollow">Ongakuer</a></p>
+            <p>Revised by <a href="https://argcv.com" rel="external nofollow">argcv</a></p>
 <!-- stats of cnzz.com start -->
 <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253531223'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/z_stat.php%3Fid%3D1253531223%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
 <!-- stats of cnzz.com end -->

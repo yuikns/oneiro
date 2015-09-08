@@ -1,7 +1,8 @@
 <div id="sidebar">
-
   <div id="sidebar-layout">
     <?php if (!dynamic_sidebar('Sidebar')) : ?>
+        <!-- !dynamic_sidebar -->
+        </div><!--sidebar-layout-->
     <?php endif; ?>
     <ul>
 
@@ -50,14 +51,16 @@
 
 
         <!--Archives-->
+        <!-- 
         <li id="sidebar-archives" class="widget">
             <h3>Archives</h3>
             <ul>
-                <?php wp_get_archives('type=monthly'); ?>
+                <?php /* wp_get_archives('type=monthly'); */ ?>
             </ul>
         </li>
+        -->
 
-     <!--Links-->
+        <!--Links-->
         <li id="sidebar-link" class="widget">
             <h3>Links</h3>
             <ul class="ulstyle">
@@ -65,9 +68,8 @@
             </ul>
         </li>
 
-   </ul>
+    </ul>
 
-  </div><!--sidebar-layout-->
   <div style="height:60px;"></div>
   <div class="clear"></div>
 </div><!--sidebar-->

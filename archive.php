@@ -32,8 +32,11 @@
    <?php /* If this is a tag archive */
  } elseif (is_tag()) {
      ?>
-    <h1>Posts Tagged &#8216;<?php single_tag_title();
-     ?>&#8217;</h1>
+    <h1>Posts Tagged &#8216;<?php single_tag_title(); ?>&#8217;</h1>
+    <?php if(strlen(trim(strip_tags(tag_description()))) > 0 ) { ?>
+    <p><blockquote> <?php echo trim(strip_tags(tag_description())); ?> </blockquote></p>
+    <br/>
+    <?php } ?>
    <?php /* If this is a daily archive */
  } elseif (is_day()) {
      ?>

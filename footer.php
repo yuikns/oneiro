@@ -17,10 +17,7 @@
             <p><?php bloginfo('description'); ?></p>
             <p>Powered by <a href="http://wordpress.org/" rel="external nofollow">WordPress <?php bloginfo('version');?></a></p>
             <p>Designed by <a href="http://weibo.com/123551954" rel="external nofollow">Ongakuer</a></p>
-            <p>Revised by <a href="https://argcv.com" rel="external nofollow">argcv</a></p>
-<!-- stats of cnzz.com start -->
-<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253531223'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/z_stat.php%3Fid%3D1253531223%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
-<!-- stats of cnzz.com end -->
+            <p>Revised by <a title="ArgCV" href="http://ArgCV.com"><strong><span style="color: OrangeRed;">Arg</span><span style="color: Gold;">C</span><span style="color: MediumPurple;">V</span></strong></a></p>
                 </div> <!-- .footerinfo -->
 
                 <ul>
@@ -44,32 +41,17 @@
 
             </div> <!-- .footerbar -->
             <div id="copyright"></div> <!-- .copyright -->
-
         </div><!--.fcontainer This is used to make it in center of the page -->
-      <!-- footer end -->
-      <script type='text/javascript'> // This is the animated navigation bar
-    jQuery(document).ready(function() {
-    $("#nav ul").css({display: "none"}); // Opera Fix
-    $("#nav li").hover(function(){
-            $(this).find('ul:first').css({visibility: "visible",display: "none"}).show(268);
-            },function(){
-            $(this).find('ul:first').fadeOut(200)
-            });
-    $("#nav a").hover(function(){
-                    $(this).stop().animate({marginTop:"2px"},100);}
-                ,function(){
-                    $(this).stop().animate({marginTop:"0px"},100);
-            });
-            $("#nav ul a").hover(function(){
-                    $(this).stop().animate({marginLeft:"10px"},200);}
-                ,function(){
-                    $(this).stop().animate({marginLeft:"0px"},200);
-            });
-    });
-    </script>
-    <script src="<?php bloginfo('template_url');?>/js/Oneirojs.js"></script>
+        <script src="<?php bloginfo('template_url');?>/js/Oneirojs.min.js"></script>
+        <!-- footer end -->
     </div><!--footer-->
 </div><!--#main-->
 <?php wp_footer(); ?>
+<!-- stats of cnzz.com start -->
+<!-- stop using cnzz -->
+<!--
+<div style="display:none"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253531223'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/z_stat.php%3Fid%3D1253531223%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script></div>
+-->
+<!-- stats of cnzz.com end -->
 </body>
 </html>

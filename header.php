@@ -27,6 +27,8 @@
     <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?>" href="<?php bloginfo('rss2_url'); ?>" />
     <link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?>" href="<?php bloginfo('atom_url'); ?>" />
 
+    <link rel='stylesheet' id='open-sans-css'  href='//fonts.argcv.com/fantasque-sans-mono.css' type='text/css' media='all' />
+
     <link rel="canonical" href="<?php echo curPageURL(); ?>" /> <!-- Canonical helps with SEO -->
     <!-- Let IE8 compatible HTML5  -->
         <!--[if lt IE 9]>
@@ -35,14 +37,20 @@
     <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>" />
 
     <!-- <script  src="<?php bloginfo('template_url');?>/js/jquery.js"></script> -->
-     <?php
+    <?php
         wp_deregister_script('jquery');
-        //wp_register_script('jquery', '//lib.sinaapp.com/js/jquery/2.0.3/jquery-2.0.3.min.js', array(), '2.0.3');
         wp_register_script('jquery', '//upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.3.min.js', array(), '2.0.3');
         wp_enqueue_script('jquery');
     ?>
 
-
+    <?php
+        // bootstrap , shall after jquery
+        /*
+        wp_register_script('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', array(), '3.3.5');
+        wp_enqueue_script('bootstrap');
+        wp_register_style( 'bootstrap', "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css");
+        wp_enqueue_style( 'bootstrap');*/
+    ?>
 
     <?php wp_head(); ?>
 
@@ -64,7 +72,7 @@
     <div id="header">
         <div class="tcontainer">
 
-             <div class="bokeh">
+             <div class="bokeh"> 
                     <?php  if (is_user_logged_in()) {
      ?> <!-- Control Panel -->
                     <div id="if-logged-in">
@@ -74,6 +82,8 @@
                     <?php
 
  } ?>
+
+
 
                 <div id="logo">
                     <?php if (is_front_page() || is_home()) {

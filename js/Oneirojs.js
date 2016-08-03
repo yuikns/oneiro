@@ -1,4 +1,21 @@
 jQuery(document).ready(function($) {
+    window.console.info("enjoy code, enjoy life.");
+
+    // for animated navigation bar
+    $("#nav ul").css({display: "none"}); // Opera Fix
+    $("#nav li").hover(
+        function(){$(this).find('ul:first').css({visibility: "visible",display: "none"}).show(268);},
+        function(){$(this).find('ul:first').fadeOut(200)});
+
+    $("#nav a").hover(
+        function(){$(this).stop().animate({marginTop:"2px"},100);},
+        function(){$(this).stop().animate({marginTop:"0px"},100);});
+ 
+    $("#nav ul a").hover(
+        function(){$(this).stop().animate({marginLeft:"10px"},200);},
+        function(){$(this).stop().animate({marginLeft:"0px"},200);});
+
+
     // 这个是more标签的
     $("#content a.more-link").hover(function() {
         if (!$(this).is(":animated")) {
@@ -79,7 +96,7 @@ jQuery(document).ready(function($) {
     $('.showclose').on("click", function() {
         if ($(this).hasClass('showclose_extend')) {
             $(this).removeClass('showclose_extend');
-            $(this).text("♤ Close Sidebar")
+            $(this).text("♤ Hide Sidebar")
             $(".layout").css({
                 "border-right": "1px solid #d5d5d5",
                 "background": "#fff"
@@ -89,7 +106,7 @@ jQuery(document).ready(function($) {
             }, 800);
         } else {
             $(this).addClass('showclose_extend');
-            $(this).text("✜ Open Sidebar")
+            $(this).text("✜ Show Sidebar")
             $(".layout").css({
                 "border-right": "none",
                 "background": "none"

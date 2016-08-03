@@ -46,7 +46,7 @@ Template Name: GuestBook
                 <span class="con-edit">
                 <?php edit_post_link('<span class="edit">Edit</span>');?>
                 </span>
-                <span class="showclose" style="display: block">♤ Close Sidebar</span>
+                <span class="showclose" style="display: block">♤ Hide Sidebar</span>
                 <span class="con-time">
                 <?php if (function_exists('the_views')) {
     the_views();

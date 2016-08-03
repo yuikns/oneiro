@@ -40,7 +40,7 @@
    <?php /* If this is a daily archive */
  } elseif (is_day()) {
      ?>
-    <h1>Archive for <?php the_time('F jS, Y');
+    <h1>Archive for <?php the_time('l, F jS, Y');
      ?></h1>
    <?php /* If this is a monthly archive */
  } elseif (is_month()) {
@@ -87,7 +87,7 @@
                 <span class="con-time">
                 <?php if (function_exists('the_views')) {
     the_views();
-} ?>　<?php the_time('Y.m.j'); ?>
+} ?>　<?php the_time('l, F jS, Y'); ?>
                 </span></div><!--.postMeta-->
 
 

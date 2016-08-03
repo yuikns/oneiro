@@ -41,7 +41,7 @@
                 <span class="con-time">
                 <?php if (function_exists('the_views')) {
     the_views();
-} ?>　<?php the_time('l, F j, Y'); ?>
+} ?>　<?php the_time('l, F jS, Y'); ?>
                 </span></div><!--.postMeta-->
 
 

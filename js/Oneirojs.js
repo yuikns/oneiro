@@ -1,5 +1,5 @@
 jQuery(document).ready(function($) {
-    window.console.info("enjoy code, enjoy life.");
+    window.console.info("enjoy coding, enjoy life.");
 
     // for animated navigation bar
     $("#nav ul").css({display: "none"}); // Opera Fix

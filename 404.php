@@ -32,7 +32,9 @@
 <p>The web site hosting server will typically generate a "404 Not Found" web page when a user attempts to follow a <a href="https://en.wikipedia.org/wiki/Link_rot" title="Link rot">broken or dead link</a>; hence the 404 error is one of the most recognizable errors users can find on the web.</p>
 <p>A 404 error should not be confused with "server not found" or similar errors, in which a connection to the destination server could not be made at all. A 404 error indicates that the requested resource may be available again in the future; however, the fact does not guarantee the same content.</p>
 <p></p>
-<p style="text-align: center;"><img src="<?php bloginfo('template_url');?>/images/404.jpg" alt="404"  /></p></div>
+<p style="text-align: center;"><img src="<?php bloginfo('template_url');?>/images/404.jpg" alt="404"  /></p>
+
+</div>
 <div class="clear"></div></div><!--#content-->
 <?php get_sidebar(); ?>
 <div class="clear"></div>

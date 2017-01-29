@@ -39,7 +39,7 @@
     <!-- <script  src="<?php bloginfo('template_url');?>/js/jquery.js"></script> -->
     <?php
         wp_deregister_script('jquery');
-        wp_register_script('jquery', '//upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.3.min.js', array(), '2.0.3');
+        wp_register_script('jquery', 'https://code.jquery.com/jquery-3.1.1.min.js', array(), '3.1.1');
         wp_enqueue_script('jquery');
     ?>
 

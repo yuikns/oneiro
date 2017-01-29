@@ -31,7 +31,7 @@
                     <?php the_category(', ') ?>
                 </span>
 
-                 <span class="con-commt">
+                <span class="con-commt">
                     <?php comments_popup_link('No Comment', '1 Comment', '% Comments'); ?>
                 </span>
                 <span class="con-edit">
@@ -39,11 +39,12 @@
                 </span>
                 <span class="showclose" style="display: block">♤ Hide Sidebar</span>
                 <span class="con-time">
-                <?php if (function_exists('the_views')) {
-    the_views();
-} ?>　<?php the_time('l, F jS, Y'); ?>
+                    <?php if (function_exists('the_views')) { the_views(); } ?>　
+                    <?php the_time('l, F jS, Y'); ?>
                 </span>
+
             </div><!--.postMeta-->
+
 
             <div class="post-content">
                 <?php the_content(); ?>

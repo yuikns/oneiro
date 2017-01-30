@@ -167,8 +167,8 @@ body {margin: 0;padding: 0;}
 	#content .post-meta-single a{color:#a9a9a9;clear:both;}
 	#content .post-meta-single a:hover{color:#000;}
 	/*tips for slide*/
-	#godown{width:16px; height:16px; float:right; position: absolute; z-index:99; background: url(images/godown.gif) no-repeat; right:-9px;top:25px; cursor:pointer;}	
-	#tip{width:57px; height:24px; float:right; position: absolute; z-index:99; background: url(images/godown.gif) no-repeat; background-position: right; right:8px;top:21px; display:none}	
+	#godown{width:16px; height:16px; float:right; position: absolute; z-index:90; background: url(images/godown.gif) no-repeat; right:-9px;top:25px; cursor:pointer;}
+	#tip{width:57px; height:24px; float:right; position: absolute; z-index:90; background: url(images/godown.gif) no-repeat; background-position: right; right:8px;top:21px; display:none}	
 	
 	
 		

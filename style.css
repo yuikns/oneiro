@@ -394,7 +394,8 @@ body {margin: 0;padding: 0;}
 /*-----Footer-----*/
 #footer { background: url(images/blackbg.png) repeat;font-family: FantasqueSansMonoRegular,   Arial, Verdana,"Microsoft YaHei",sans-serif;}
 .fcontainer {width: 921px; margin: 0 auto;background-position-y:bottom; background-image:url(images/light.png); background-repeat:no-repeat; }
-#footerbg { background: url(images/footerbg.png)  repeat-x;height:83px; margin-top:-90px; position:relative; z-index:99;}
+/* #footerbg { background: url(images/footerbg.png)  repeat-x;height:83px; margin-top:-90px; position:relative; z-index:99;} */
+#footerbg { background: url(images/footerbg.png)  repeat-x;height:82px; margin-top:-82px; position:inherit; z-index:99;}
 	.footerbar{ position:relative; width:800px; top:-30px; z-index:99; color:#b2b2b2;font-size:13px; line-height:20px;color:#838383;}
 	.footerbar a{color: #838383; }
 	.footerbar a:hover{color: #FFF;}

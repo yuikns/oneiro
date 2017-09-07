@@ -45,7 +45,7 @@
                 </span>
             </div><!--.postMeta-->
 
-            <div class="post-content">
+            <div class="post-content entry-content">
                 <?php the_content(); ?>
             </div>
 

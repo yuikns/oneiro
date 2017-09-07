@@ -429,6 +429,15 @@ body {margin: 0;padding: 0;}
 		.wp-caption { border: 1px solid #ddd; text-align: center;background-color: #f3f3f3;padding: 4px; margin:10px;font-size: 12px;}
 		   
 
+/* drop down first character */
+div.entry-content > p:first-child:first-letter {
+float:left;
+font-size:4em;
+color: #0099ff;
+margin-right:0.10em;
+line-height:90%;
+text-shadow:1px 1px 2px #b5b5b5;
+}
 
 
 /*the end*/

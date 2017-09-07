@@ -20,6 +20,10 @@
     <div id="content">
     <div class="content-header"></div>
 
+    <?php
+        global $paged;
+        if ($paged == 0) $page_number = 1; else $page_number = $paged;
+    ?>
 
     <h1>Result of "<?php the_search_query(); ?>"</h1>
 
@@ -58,7 +62,9 @@
 } else {
 } ?> <!-- Thumbnail judgment -->
 
+                <div class="entry-content">
                 <?php the_content(__('Read more'));?>
+                </div>
             </div>
 
              <div class="post-bottom"> </div><!-- end .post-bottom -->

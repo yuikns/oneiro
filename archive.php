@@ -101,7 +101,9 @@
 } else {
 } ?> <!-- Thumbnail judgment code -->
 
-                <?php the_content(__('Read more'));?>
+                <div class="entry-content">
+                    <?php the_content(__('Read more'));?>
+                </div>
             </div>
 
              <div class="post-bottom"> </div><!-- end .post-bottom -->

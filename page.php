@@ -24,14 +24,24 @@
 
 
             <div class="post-meta-single">
+                <span class="com-writer">
+                    <?php the_author_posts_link() ?>
+                </span>
+                <span class="con-cate">
+                    <?php the_category(', ') ?>
+                </span>
+
+                <span class="con-commt">
+                    <?php comments_popup_link('No Comment', '1 Comment', '% Comments'); ?>
+                </span>
                 <span class="con-edit">
-                    <?php edit_post_link('<span class="edit">Edit</span>');?>
+                <?php edit_post_link('<span class="edit">Edit</span>');?>
                 </span>
                 <span class="showclose" style="display: block">♤ Hide Sidebar</span>
                 <span class="con-time">
-                    <?php if (function_exists('the_views')) {
-                        the_views();
-                    } ?>
+                <?php if (function_exists('the_views')) {
+    the_views();
+} ?>
                 </span>
             </div><!--.postMeta-->
 

@@ -36,10 +36,13 @@
         <![endif]-->
     <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>" />
 
-    <!-- <script  src="<?php bloginfo('template_url');?>/js/jquery.js"></script> -->
+    <!--
+    <script  src="<?php bloginfo('template_url');?>/js/jquery.js"></script>
+    -->
+
     <?php
         wp_deregister_script('jquery');
-        wp_register_script('jquery', '//upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.3.min.js', array(), '2.0.3');
+	wp_register_script('jquery', '//upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.3.min.js', array(), '2.0.3');
         wp_enqueue_script('jquery');
     ?>
 

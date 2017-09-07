@@ -42,7 +42,7 @@
             </div> <!-- .footerbar -->
             <div id="copyright"></div> <!-- .copyright -->
         </div><!--.fcontainer This is used to make it in center of the page -->
-        <script src="<?php bloginfo('template_url');?>/js/Oneirojs.js"></script>
+        <script src="<?php bloginfo('template_url');?>/js/Oneirojs.min.js"></script>
         <!-- footer end -->
     </div><!--footer-->
 </div><!--#main-->

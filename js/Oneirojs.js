@@ -118,6 +118,7 @@ jQuery(document).ready(function($) {
     });
 
 
+
     //滑动定位
     $("#godown").hover(function() {
         $("#tip").fadeIn(300);
@@ -150,6 +151,10 @@ $(window).scroll(function() { //浏览器滚动条触发事件
 
 
     //添加更多    
+
+    // LOGO
+    $('argcv').html('<span style="color:MediumPurple;">A</span><span style="color:SkyBlue;">rg</span><span style="color:Gold;">C</span><span style="color:OrangeRed;">V</span>');
+
 
 });
 

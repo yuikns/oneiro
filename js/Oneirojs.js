@@ -98,7 +98,8 @@ jQuery(document).ready(function($) {
                 "background": "#fff"
             }, 500);
             $('#sidebar').delay(800).slideDown(800).prev().animate({
-                width: "640px"
+                // width: "640px"
+                width: "73%"
             }, 800);
         } else {
             $(this).addClass('showclose_extend');
@@ -108,7 +109,8 @@ jQuery(document).ready(function($) {
                 "background": "none"
             }, 300);
             $('#sidebar').hide(500).prev().animate({
-                width: "859px"
+                // width: "859px"
+                width: "100%"
             }, 1000);
         }
     });

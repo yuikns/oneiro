@@ -20,14 +20,13 @@
 
 
     <meta charset="<?php bloginfo('charset'); ?>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="/favicon.png" />
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="index" title="<?php bloginfo('name'); ?>" href="<?php echo get_option('home'); ?>/" />
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?>" href="<?php bloginfo('rss2_url'); ?>" />
     <link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?>" href="<?php bloginfo('atom_url'); ?>" />
-
-    <link rel='stylesheet' id='open-sans-css'  href='//fonts.argcv.com/fantasque-sans-mono.css' type='text/css' media='all' />
 
     <link rel="canonical" href="<?php echo curPageURL(); ?>" /> <!-- Canonical helps with SEO -->
     <!-- Let IE8 compatible HTML5  -->
